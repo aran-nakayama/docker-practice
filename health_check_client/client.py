@@ -2,7 +2,7 @@ import requests
 
 def main():
     # APIコンテナのホスト名とポート
-    url = 'http://api_container:8080/health'
+    url = 'http://localhost:8080/health'
     try:
         response = requests.get(url)
         print(f"ステータスコード: {response.status_code}")

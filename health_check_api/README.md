@@ -24,8 +24,8 @@
 2. Podmanでイメージをビルドし、コンテナを起動します。ホストのポート 8080 をコンテナのポート 8080 にマッピングします。
 
    ```bash
-   podman build -t health-check .
-   podman run -d -p 8080:8080 health-check
+   podman build -t health-check-api .
+   podman run -d -p 8080:8080 health-check-api
    ```
 
 3. コンテナが起動したら、以下のURLにアクセスしてヘルスチェックエンドポイントを確認します。
