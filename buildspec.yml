@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password {}
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build {}
+      - docker tag {}
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push {}
+      - echo Build completed on `date`
